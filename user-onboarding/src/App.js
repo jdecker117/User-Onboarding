@@ -36,8 +36,8 @@ function App() {
     .then(res => {
       setUsers([ res.data, ...users])
     })
-    .catch(err => console.error(err));
-
+    .catch(err => console.error(err))
+    .finally(() => setFormValues(initialFormVals))
   }
 
   const validate = (name, value) => {
